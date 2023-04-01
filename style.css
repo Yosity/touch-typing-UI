@@ -1,29 +1,63 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body{
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: black;
     gap: 2rem;
 }
 .credit{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     opacity: 0;
     position: absolute;
     left:0;
     top: 0;
     right: 0;
     bottom: 0;
-    animation: fadeOut 3s ease-in;
+    -webkit-animation: fadeOut 3s ease-in;
+            animation: fadeOut 3s ease-in;
+}
+
+@-webkit-keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
 }
 
 @keyframes fadeOut {
@@ -78,12 +112,26 @@ p{
 }
 .keyboard-container{
     opacity: 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     justify-items: center;
-    animation: fadeIn 2s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
 }
 @keyframes fadeIn {
     0%{
@@ -96,8 +144,12 @@ p{
 }
 ul{
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 li{
     height: 3em;
@@ -107,10 +159,16 @@ li{
     line-height: 3em;
     letter-spacing: 1px;
     margin: 0.4em;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     text-align: center;
     font-size: 1em;
+    -webkit-transition: background-color 0.2s ,-webkit-transform 0.05s;
+    transition: background-color 0.2s ,-webkit-transform 0.05s;
+    -o-transition: background-color 0.2s ,transform 0.05s;
     transition: background-color 0.2s ,transform 0.05s;
+    transition: background-color 0.2s ,transform 0.05s ,-webkit-transform 0.05s;
 }
 
 #ENTER{
@@ -138,16 +196,27 @@ li{
 .seventh.chosen{color: #2155CD; background-color: transparent !important; }
 
 .chosen{
-    animation: shaking 0.5s infinite;
+    -webkit-animation: shaking 0.5s infinite;
+            animation: shaking 0.5s infinite;
+}
+
+@-webkit-keyframes shaking {
+  
+        0% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+        25% { -webkit-transform: translate(2px); transform: translate(2px) }
+        50% { -webkit-transform: translateX(-2px); transform: translateX(-2px) }
+        75% { -webkit-transform: translateX(2px); transform: translateX(2px) }
+        100% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+       
 }
 
 @keyframes shaking {
   
-        0% { transform: translate(0,0) }
-        25% { transform: translate(2px) }
-        50% { transform: translateX(-2px) }
-        75% { transform: translateX(2px) }
-        100% { transform: translate(0,0) }
+        0% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+        25% { -webkit-transform: translate(2px); transform: translate(2px) }
+        50% { -webkit-transform: translateX(-2px); transform: translateX(-2px) }
+        75% { -webkit-transform: translateX(2px); transform: translateX(2px) }
+        100% { -webkit-transform: translate(0,0); transform: translate(0,0) }
        
 }
 
