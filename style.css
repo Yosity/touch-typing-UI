@@ -1,0 +1,237 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    gap: 2rem;
+}
+.credit{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: fadeOut 3s ease-in;
+            animation: fadeOut 3s ease-in;
+}
+
+@-webkit-keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: var(--very-dark-purple);
+    border-radius: 17px;
+    margin-block: 0.8rem;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: crimson;
+    border: 1px solid black;
+    border-radius: 17px;
+  }
+h1{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+   }
+
+h2{
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+p{
+    
+    white-space:pre-wrap;
+    padding:1rem 3rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 800px;
+    height: 150px;
+    line-height: 2.2rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    word-wrap: break-word; 
+}
+.keyboard-container{
+    opacity: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+ul{
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+li{
+    height: 3em;
+    width: 3em;
+    color: rgba(0,0,0,0.7);
+    border-radius: 0.4em;
+    line-height: 3em;
+    letter-spacing: 1px;
+    margin: 0.4em;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1em;
+    -webkit-transition: background-color 0.2s ,-webkit-transform 0.05s;
+    transition: background-color 0.2s ,-webkit-transform 0.05s;
+    -o-transition: background-color 0.2s ,transform 0.05s;
+    transition: background-color 0.2s ,transform 0.05s;
+    transition: background-color 0.2s ,transform 0.05s ,-webkit-transform 0.05s;
+}
+
+#ENTER{
+    width: 5.9em;
+}
+#caps{
+    width: 6.5em;
+}
+.shift{
+    width: 8.1em;
+}
+#BACKSPACE{
+    width: 5.6em;
+}
+#tab{
+    width: 5.5em;
+}
+
+.first.chosen{color: #2155CD; background-color: transparent!important;}
+.second.chosen{color: #0AA1DD; background-color: transparent !important;}
+.third.chosen{color: #79DAE8; background-color: transparent !important;}
+.fourth.chosen{color: #E8F9FD; background-color: transparent !important;}
+.fifth.chosen{color: #79DAE8; background-color: transparent !important;}
+.sixth.chosen{color: #0AA1DD; background-color: transparent !important;}
+.seventh.chosen{color: #2155CD; background-color: transparent !important; }
+
+.chosen{
+    -webkit-animation: shaking 0.5s infinite;
+            animation: shaking 0.5s infinite;
+}
+
+@-webkit-keyframes shaking {
+  
+        0% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+        25% { -webkit-transform: translate(2px); transform: translate(2px) }
+        50% { -webkit-transform: translateX(-2px); transform: translateX(-2px) }
+        75% { -webkit-transform: translateX(2px); transform: translateX(2px) }
+        100% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+       
+}
+
+@keyframes shaking {
+  
+        0% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+        25% { -webkit-transform: translate(2px); transform: translate(2px) }
+        50% { -webkit-transform: translateX(-2px); transform: translateX(-2px) }
+        75% { -webkit-transform: translateX(2px); transform: translateX(2px) }
+        100% { -webkit-transform: translate(0,0); transform: translate(0,0) }
+       
+}
+
+.first{background-color: #2155CD; border: 1.5px solid #2155CD;}
+.second{background-color: #0AA1DD; border: 1.5px solid #0AA1DD;}
+.third{background-color: #79DAE8; border: 1.5px solid #79DAE8;}
+.fourth{background-color: #E8F9FD; border: 1.5px solid #E8F9FD;}
+.fifth{background-color: #79DAE8; border: 1.5px solid #79DAE8;}
+.sixth{background-color: #0AA1DD; border: 1.5px solid #0AA1DD;}
+.seventh{background-color: #2155CD; border: 1.5px solid #2155CD;}
+
+
+/* Red colors
+    crimson
+    darkorange
+    gold
+    khaki 
+*/
